@@ -1,15 +1,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: ND9991 C3 L4 
+Description: ND9991 C3 L4
+Parameters:
+  EnvironmentName:
+    Description: An environment name that will be prefixed to resource names
+    Type: String 
 Resources:
   EC2Instance:
-    Type: AWS::EC2::Instance
+    Type: "AWS::EC2::Instance"
     Properties:
       SecurityGroups:
-        - !Ref InstanceSecurityGroup
-      # Change this, as applicable to you      
+        - !Ref InstanceSecurityGroup      
       KeyName: cicdkeypair
-      # Change this, as applicable to you
-      # You may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
       ImageId: "ami-052efd3df9dad4825"
       InstanceType: t3.micro
   InstanceSecurityGroup:
