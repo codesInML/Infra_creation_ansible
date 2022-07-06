@@ -1,8 +1,4 @@
 Description: ND9991 C3 L4
-Parameters:
-  EnvironmentName:
-    Description: An environment name that will be prefixed to resource names
-    Type: String 
 Resources:
   EC2Instance:
     Type: "AWS::EC2::Instance"
