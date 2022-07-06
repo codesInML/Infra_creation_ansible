@@ -16,7 +16,7 @@ jobs:
               --template-file file://template.yml \
               --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
               --region us-east-1 \
-              --capabilities CAPABILITY_IAM \
+              --capabilities CAPABILITY_NAMED_IAM \
               --debug
               
 workflows:
